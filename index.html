@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curso Básico de HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .example {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .result {
+            background: #e8f4f8;
+            padding: 10px;
+            border: 1px dashed #3498db;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Curso Básico de HTML5 para Principiantes</h1>
+
+<!-- ========== SECCIÓN 1: INTRODUCCIÓN ========== -->
+<h2>1. ¿Qué es HTML5?</h2>
+<p>HTML5 es el lenguaje estándar para crear páginas web. Consiste en <strong>etiquetas (tags)</strong> que definen la estructura y contenido de una página.</p>
+
+<div class="example">
+    <h3>Ejemplo básico:</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+<!-- ========== SECCIÓN 2: ETIQUETAS, ATRIBUTOS Y VALORES ========== -->
+<h2>2. ¿Qué son etiquetas, atributos y valores?</h2>
+
+<h3>Etiquetas (Tags)</h3>
+<p>Son palabras clave entre <code>&lt; &gt;</code> que definen elementos HTML. Pueden ser:</p>
+<ul>
+    <li><strong>De apertura:</strong> <code>&lt;etiqueta&gt;</code></li>
+    <li><strong>De cierre:</strong> <code>&lt;/etiqueta&gt;</code> (algunas no lo necesitan)</li>
+</ul>
+
+<h3>Atributos</h3>
+<p>Son modificadores que van <strong>dentro de la etiqueta de apertura</strong> y proporcionan información adicional:</p>
+<pre><code>&lt;etiqueta <strong>atributo="valor"</strong>&gt;Contenido&lt;/etiqueta&gt;</code></pre>
+
+<h3>Valores</h3>
+<p>Es la configuración específica del atributo, siempre entre comillas:</p>
+<pre><code>&lt;img <strong>src="foto.jpg"</strong> <strong>alt="Mi imagen"</strong>&gt;</code></pre>
+
+<!-- ========== SECCIÓN 3: ETIQUETAS BÁSICAS ========== -->
+<h2>3. Etiquetas básicas</h2>
+
+<h3>Encabezados (h1 a h6)</h3>
+<div class="example">
+    <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Sub-sección&lt;/h3&gt;</code></pre>
+    <div class="result">
+        <h1 style="font-size: 24px; margin: 5px 0;">Título principal</h1>
+        <h2 style="font-size: 20px; margin: 5px 0;">Subtítulo</h2>
+        <h3 style="font-size: 18px; margin: 5px 0;">Sub-sección</h3>
+    </div>
+</div>
+
+<h3>Párrafos (p)</h3>
+<pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;
+&lt;p&gt;Este es otro párrafo.&lt;/p&gt;</code></pre>
+
+<h3>Enlaces (a)</h3>
+<p>Usa el atributo <code>href</code> para especificar el destino:</p>
+<pre><code>&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
+
+<h3>Imágenes (img)</h3>
+<p>Etiqueta auto-cerrada con dos atributos obligatorios:</p>
+<pre><code>&lt;img src="ruta/de/imagen.jpg" alt="Texto alternativo"&gt;</code></pre>
+
+<!-- ========== SECCIÓN 4: LISTAS Y TABLAS ========== -->
+<h2>4. Listas y tablas</h2>
+
+<h3>Lista no ordenada (ul)</h3>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;Manzana&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<h3>Lista ordenada (ol)</h3>
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;Primer paso&lt;/li&gt;
+    &lt;li&gt;Segundo paso&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+<h3>Tablas (table, tr, th, td)</h3>
+<pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nombre&lt;/th&gt;
+        &lt;th&gt;Edad&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ana&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+<!-- ========== SECCIÓN 5: FORMULARIOS ========== -->
+<h2>5. Formularios (form)</h2>
+<p>Para recolectar datos del usuario:</p>
+<pre><code>&lt;form&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+
+<!-- ========== SECCIÓN 6: ESTRUCTURA SEMÁNTICA ========== -->
+<h2>6. HTML5 Semántico</h2>
+<p>Etiquetas que mejoran la organización y accesibilidad:</p>
+<pre><code>&lt;header&gt;Encabezado&lt;/header&gt;
+&lt;nav&gt;Menú de navegación&lt;/nav&gt;
+&lt;main&gt;
+    &lt;article&gt;Contenido principal&lt;/article&gt;
+    &lt;aside&gt;Contenido secundario&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Pie de página&lt;/footer&gt;</code></pre>
+
+<!-- ========== SECCIÓN 7: EJEMPLO COMPLETO ========== -->
+<h2>7. Página web completa</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenido&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+        &lt;a href="#inicio"&gt;Inicio&lt;/a&gt; |
+        &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Sobre mí&lt;/h2&gt;
+            &lt;p&gt;¡Hola! Esta es mi primera página.&lt;/p&gt;
+            &lt;img src="foto.jpg" alt="Mi foto" width="200"&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;© 2023 - Todos los derechos reservados&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+</body>
+</html>
