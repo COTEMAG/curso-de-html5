@@ -67,6 +67,20 @@
 <p>Son modificadores que van <strong>dentro de la etiqueta de apertura</strong> y proporcionan información adicional:</p>
 <pre><code>&lt;etiqueta <strong>atributo="valor"</strong>&gt;Contenido&lt;/etiqueta&gt;</code></pre>
 
+<h3>Atributos globales comunes</h3>
+<p>Algunos atributos globales podrian ser <code>id</code> y tambien <code>class</code>, son de los mas utilizados ya que permiten darle una clase o un id especifico a cada elemento HTML.</p>
+<p style="font-size: 0.8em">El atributo <code>id</code> es para darle un identificador unico al elemento, mientras que el atributo <code>class</code> agrupa elementos para aplicar estilos o comportamientos a ciertos elementos</p>
+<p style="font-size: 0.8em">Ejemplo de clase</p>
+<pre>
+    <code>&lt;h1 class="titulo-especial"&gt; Titulo unico &lt;h1&gt;</code>
+</pre>
+<p style="font-size: 0.8em">Ejemplo de identificador (id)</p>
+<pre>
+    <code>&lt;p id="parrafo-importante"&gt; Este es un parrafo importante &lt;p&gt;</code>
+</pre>
+<p style="font-size: 0.8em">Se recomienda usar las clases para varios elementos, mientras que las ID solo para un unico elemento en todo el archivo HTML.</p>
+
+    
 <h3>Valores</h3>
 <p>Es la configuración específica del atributo, siempre entre comillas:</p>
 <pre><code>&lt;img <strong>src="foto.jpg"</strong> <strong>alt="Mi imagen"</strong>&gt;</code></pre>
@@ -93,6 +107,14 @@
 <h3>Enlaces (a)</h3>
 <p>Usa el atributo <code>href</code> para especificar el destino:</p>
 <pre><code>&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
+
+<h3>Importancia (strong)</h3>
+<p>La etiqueta <code>strong</code> se utiliza para definir texto de gran importancia. El contenido que contiene se muestra en negrita:</p>
+<pre><code>&lt;strong&gt;<b>Este texto es importante</b>&lt;strong&gt;</code></pre>
+
+<h3>Negrita (b)</h3>
+<p>La etiqueta <code>b</code> especifica texto en negrita sin ninguna importancia adicional:</p>
+<pre><code>&lt;b&gt;<b>Este texto está en negrita</b>&lt;/b&gt;</code></pre>
 
 <h3>Imágenes (img)</h3>
 <p>Etiqueta auto-cerrada con dos atributos obligatorios:</p>
@@ -149,12 +171,37 @@
 &lt;/main&gt;
 &lt;footer&gt;Pie de página&lt;/footer&gt;</code></pre>
 
-<!-- ========== SECCIÓN 7: EJEMPLO COMPLETO ========== -->
-<h2>7. Página web completa</h2>
+<!-- ========== SECCIÓN 7: METAETIQUETAS ========== -->
+<h2>7. Metaetiquetas </h2>
+<p>Las metaetiquetas son etiquetas HTML que proporcionan información sobre una pagina web al cliente (motores de búsqueda/navegador), son datos no-visibles pero que ayudan al cliente (navegador) a entender de que trata la pagina y a mostrarla correctamente en los resultados de búsqueda. </p>
+<p>Las etiquetas <code>&lt;meta&gt;</code> siempre van dentro del elemento <code>&lt;head&gt;</code> y se utiliza normalmente para especificar la descripción de la página, las palabras clave, el autor del documento, entre otros. </p>
+<p>Las etiquetas <code>&lt;meta&gt;</code> no serán visibles en la página, pero el cliente (navegador) lo analizará para entenderla mejor. Estas etiquetas se usan semánticamente para lograr una mejor posición de tu página web. </p>
+
+<h3>Para definir palabras clave</h3>
+<p style="font-size: 0.8em">Se utiliza el <strong>name</strong> para especificar el nombre del metadato y luego se usa <strong>content</strong> para especificar el valor asociado con el nombre del atributo, ejemplo </p>
+<pre>
+  <code>&lt;meta name="keywords" content="HTML, css, javascript"&gt;</code>
+</pre>
+<p style="font-size: 0.8em">Siempre se deben separar por una coma (,) las palabras clave.</p>
+<h3>Para definir al autor</h3>
+<pre>
+  <code>&lt;meta name="author" content="Nombre"&gt;</code>
+</pre>
+<h3>Para ponerle descripcion a tu página web</h3>
+<pre>
+  <code>&lt;meta name="description" content="descripcion de la página"&gt;</code>
+</pre>
+<p style="font-size: 0.8em">En la descripción de la página se recomienda no usar más de 150 carácteres</p>
+
+<!-- ========== SECCIÓN 8: EJEMPLO COMPLETO ========== -->
+<h2>8. Página web completa</h2>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;meta name="author" content="John Doe"&gt;
+&lt;meta name="description" content="este es un ejemplo de descripcion"&gt;
+&lt;meta name="keywords" content="html, css, web, primera pagina"&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;header&gt;
@@ -177,41 +224,39 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<!--SECCIÓN 8: USO DE LOS META TAGS-->
-<h1>¿QUÉ SON LOS META TAGS</h1>
+
+  <!--SECCIÓN 9: USO DE LOS META TAGS-->
+
+  <h1>¿QUÉ SON LOS META TAGS</h1>
 
 <h2>Son etiquetas que se colocan dentro del "head" de una pagina web. Su función es proporcionar información sobre la página a los navegadores y buscadores (como Google).</h2>
 
 <h2>Los meta tags más utilizados son:</h2>
-    <ul>
-        <li> <meta charset= "UTF-8">
-    <p>Permite que la página muestre correctamente letras con tildes, la "ñ" y simbolos especiales</p>
-        </li>
-        
-        <li> <meta name="viewport" content="width"=device-width, initial-scale="1.0">
-        </li>
-        <p> Hace que el ancho de la página se adapte al tamaño del dispositivo. Es esencial para que la web se vea bien en celulares, tablets y computadoras.
-        </p>
-        
-        <li> <meta name="description" content="________">
-        </li>
-        <p> Permite escribir una descripción corta del contenido de la página.Esta descripción puede aparecer en los resultados de búsqueda
-        </p>
-       
-        <li> <meta name="keywords" content="palabra1, palabra2, ...">
-        </li>
-        <p> Permite listar palabras claves que ayudan que los motores de búsqueda encuentren la página más facil.
-        </p>
+<ul>
+    <li><code>&lt;meta charset="UTF-8"&gt;</code>
+        <p>Permite que la página muestre correctamente letras con tildes, la "ñ" y simbolos especiales</p>
+    </li>
+    
+    <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        <p>Hace que el ancho de la página se adapte al tamaño del dispositivo. Es esencial para que la web se vea bien en celulares, tablets y computadoras.</p>
+    </li>
+    
+    <li><code>&lt;meta name="description" content="________"&gt;</code>
+        <p>Permite escribir una descripción corta del contenido de la página. Esta descripción puede aparecer en los resultados de búsqueda.</p>
+    </li>
+    
+    <li><code>&lt;meta name="keywords" content="palabra1, palabra2, ..."&gt;</code>
+        <p>Permite listar palabras claves que ayudan a que los motores de búsqueda encuentren la página más fácil.</p>
+    </li>
 
-        <li><meta name="author" content="Nombre del autor">
-        </li>
+    <li><code>&lt;meta name="author" content="Nombre del autor"&gt;</code>
         <p>Indica quién es el creador o autor de la página web</p>
+    </li>
 
-        <li><meta name="robots" content="nosnippet">
-        </li>
-        <p>  Da instrucciones a los motores de búsqueda.
-            En este caso, le dice a Google que no muestre fragmentos de la página (como descripciones o partes del texto) en los resultados.</p>
-    </ul>
+    <li><code>&lt;meta name="robots" content="nosnippet"&gt;</code>
+        <p>Da instrucciones a los motores de búsqueda. En este caso, le dice a Google que no muestre fragmentos de la página en los resultados.</p>
+    </li>
+</ul>
         
 
 </body>
