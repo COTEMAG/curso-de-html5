@@ -224,36 +224,40 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-    <h2>Cabecera de una tabla en HTML</h2>
 
-<h3>Tabla con &lt;thead&gt;, &lt;tbody&gt;, &lt;th&gt; y &lt;td&gt;</h3>
+  <!--SECCIÓN 9: USO DE LOS META TAGS-->
 
-<table border="1">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>País</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Ana</td>
-            <td>25</td>
-            <td>México</td>
-        </tr>
-        <tr>
-            <td>Luis</td>
-            <td>30</td>
-            <td>España</td>
-        </tr>
-    </tbody>
-</table>
+  <h1>¿QUÉ SON LOS META TAGS</h1>
 
-<p>
-La etiqueta <code>&lt;thead&gt;</code> define la parte superior de la tabla (encabezado), donde se suelen colocar los títulos de cada columna usando <code>&lt;th&gt;</code>. 
-El contenido principal va en <code>&lt;tbody&gt;</code>, con las celdas de datos normales escritas como <code>&lt;td&gt;</code>.
-</p>
+<h2>Son etiquetas que se colocan dentro del "head" de una pagina web. Su función es proporcionar información sobre la página a los navegadores y buscadores (como Google).</h2>
+
+<h2>Los meta tags más utilizados son:</h2>
+<ul>
+    <li><code>&lt;meta charset="UTF-8"&gt;</code>
+        <p>Permite que la página muestre correctamente letras con tildes, la "ñ" y simbolos especiales</p>
+    </li>
     
+    <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        <p>Hace que el ancho de la página se adapte al tamaño del dispositivo. Es esencial para que la web se vea bien en celulares, tablets y computadoras.</p>
+    </li>
+    
+    <li><code>&lt;meta name="description" content="________"&gt;</code>
+        <p>Permite escribir una descripción corta del contenido de la página. Esta descripción puede aparecer en los resultados de búsqueda.</p>
+    </li>
+    
+    <li><code>&lt;meta name="keywords" content="palabra1, palabra2, ..."&gt;</code>
+        <p>Permite listar palabras claves que ayudan a que los motores de búsqueda encuentren la página más fácil.</p>
+    </li>
+
+    <li><code>&lt;meta name="author" content="Nombre del autor"&gt;</code>
+        <p>Indica quién es el creador o autor de la página web</p>
+    </li>
+
+    <li><code>&lt;meta name="robots" content="nosnippet"&gt;</code>
+        <p>Da instrucciones a los motores de búsqueda. En este caso, le dice a Google que no muestre fragmentos de la página en los resultados.</p>
+    </li>
+</ul>
+        
+
 </body>
 </html>
