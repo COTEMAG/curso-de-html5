@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Básico de HTML5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #7f8c8d;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .index {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .index ol {
+            padding-left: 20px;
+        }
+
+        .index li {
+            margin-bottom: 8px;
+        }
+
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            color: #e74c3c;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .code-example {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            border-left: 4px solid #3498db;
+        }
+
+        .result {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #bdc3c7;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        input, textarea, select {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+            
+            .code-example {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso Básico de HTML5</h1>
+
+        <!-- ========== ÍNDICE ========== -->
+        <div class="section">
+            <h2>Índice del curso</h2>
+            <div class="index">
+                <ol>
+                    <li><a href="#introduccion">¿Qué es HTML5?</a></li>
+                    <li><a href="#conceptos-basicos">Conceptos básicos: etiquetas, atributos y valores</a></li>
+                    <li><a href="#estructura-basica">Estructura básica de un documento HTML</a></li>
+                    <li><a href="#etiquetas-texto">Etiquetas para texto y contenido</a></li>
+                    <li><a href="#enlaces-imagenes">Enlaces e imágenes</a></li>
+                    <li><a href="#listas">Listas</a></li>
+                    <li><a href="#tablas">Tablas</a></li>
+                    <li><a href="#formularios">Formularios</a></li>
+                    <li><a href="#multimedia">Elementos multimedia</a></li>
+                    <li><a href="#contenedores">Contenedores y divisiones</a></li>
+                    <li><a href="#html-semantico">HTML5 Semántico</a></li>
+                    <li><a href="#metaetiquetas">Metaetiquetas</a></li>
+                    <li><a href="#ejemplo-completo">Ejemplo de página completa</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ========== SECCIÓN 1: INTRODUCCIÓN ========== -->
+        <div class="section" id="introduccion">
+            <h2>1. ¿Qué es HTML5?</h2>
+            <p>HTML5 es el lenguaje estándar para crear páginas web. Consiste en <strong>etiquetas (tags)</strong> que definen la estructura y contenido de una página.</p>
+
+            <h3>Ejemplo básico:</h3>
+            <div class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 2: CONCEPTOS BÁSICOS ========== -->
+        <div class="section" id="conceptos-basicos">
+            <h2>2. Conceptos básicos: etiquetas, atributos y valores</h2>
+
+            <h3>¿Qué son las etiquetas (Tags)?</h3>
+            <p>Son palabras clave entre corchetes angulares que definen elementos HTML. Pueden ser:</p>
+            <ul>
+                <li><strong>De apertura:</strong> <code>&lt;etiqueta&gt;</code></li>
+                <li><strong>De cierre:</strong> <code>&lt;/etiqueta&gt;</code> (algunas no lo necesitan)</li>
+            </ul>
+
+            <h3>¿Qué son los atributos?</h3>
+            <p>Son modificadores que van <strong>dentro de la etiqueta de apertura</strong> y proporcionan información adicional:</p>
+            <div class="code-example">&lt;etiqueta atributo="valor"&gt;Contenido&lt;/etiqueta&gt;</div>
+
+            <h3>¿Qué son los valores?</h3>
+            <p>Es la configuración específica del atributo, siempre entre comillas:</p>
+            <div class="code-example">&lt;img src="foto.jpg" alt="Mi imagen"&gt;</div>
+
+            <h3>Atributos globales más importantes</h3>
+            <p>Los atributos <code>id</code> y <code>class</code> son de los más utilizados ya que permiten darle una clase o un id específico a cada elemento HTML.</p>
+
+            <h4>Atributo class</h4>
+            <p>Agrupa elementos para aplicar estilos o comportamientos a varios elementos:</p>
+            <div class="code-example">&lt;h1 class="titulo-especial"&gt;Titulo único&lt;/h1&gt;</div>
+
+            <h4>Atributo id</h4>
+            <p>Da un identificador único al elemento (solo debe usarse una vez por página):</p>
+            <div class="code-example">&lt;p id="parrafo-importante"&gt;Este es un párrafo importante&lt;/p&gt;</div>
+
+            <p><strong>Recomendación:</strong> Usar las clases para varios elementos, mientras que las ID solo para un único elemento en todo el archivo HTML.</p>
+        </div>
+
+        <!-- ========== SECCIÓN 3: ESTRUCTURA BÁSICA ========== -->
+        <div class="section" id="estructura-basica">
+            <h2>3. Estructura básica de un documento HTML</h2>
+            <div class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+    &lt;!-- Aquí van las metaetiquetas, enlaces a CSS, etc. --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Aquí va todo el contenido visible --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 4: ETIQUETAS PARA TEXTO ========== -->
+        <div class="section" id="etiquetas-texto">
+            <h2>4. Etiquetas para texto y contenido</h2>
+
+            <h3>Encabezados (h1 a h6)</h3>
+            <p>Definen la jerarquía de títulos en la página:</p>
+            <div class="code-example">&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Sub-sección&lt;/h3&gt;
+&lt;h4&gt;Subsección menor&lt;/h4&gt;
+&lt;h5&gt;Título más pequeño&lt;/h5&gt;
+&lt;h6&gt;Título más pequeño aún&lt;/h6&gt;</div>
+
+            <div class="result">
+                <h1 style="font-size: 24px; margin: 5px 0;">Título principal</h1>
+                <h2 style="font-size: 20px; margin: 5px 0;">Subtítulo</h2>
+                <h3 style="font-size: 18px; margin: 5px 0;">Sub-sección</h3>
+            </div>
+
+            <h3>Párrafos (p)</h3>
+            <p>Para texto normal agrupado:</p>
+            <div class="code-example">&lt;p&gt;Este es un párrafo.&lt;/p&gt;
+&lt;p&gt;Este es otro párrafo.&lt;/p&gt;</div>
+
+            <h3>Texto con importancia (strong)</h3>
+            <p>La etiqueta <code>strong</code> se utiliza para definir texto de gran importancia. El contenido que contiene se muestra en negrita:</p>
+            <div class="code-example">&lt;strong&gt;Este texto es importante&lt;/strong&gt;</div>
+
+            <h3>Texto en negrita (b)</h3>
+            <p>La etiqueta <code>b</code> especifica texto en negrita sin ninguna importancia adicional:</p>
+            <div class="code-example">&lt;b&gt;Este texto está en negrita&lt;/b&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 5: ENLACES E IMÁGENES ========== -->
+        <div class="section" id="enlaces-imagenes">
+            <h2>5. Enlaces e imágenes</h2>
+
+            <h3>Enlaces (a)</h3>
+            <p>Usa el atributo <code>href</code> para especificar el destino:</p>
+            <div class="code-example">&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;
+&lt;a href="#introduccion"&gt;Ir a la introducción&lt;/a&gt;
+&lt;a href="mailto:correo@ejemplo.com"&gt;Enviar email&lt;/a&gt;</div>
+
+            <h3>Imágenes (img)</h3>
+            <p>Etiqueta auto-cerrada con dos atributos obligatorios:</p>
+            <div class="code-example">&lt;img src="ruta/de/imagen.jpg" alt="Texto alternativo"&gt;
+&lt;img src="foto.jpg" alt="Mi foto" width="200" height="150"&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 6: LISTAS ========== -->
+        <div class="section" id="listas">
+            <h2>6. Listas</h2>
+
+            <h3>Lista no ordenada (ul)</h3>
+            <p>Para elementos sin orden específico:</p>
+            <div class="code-example">&lt;ul&gt;
+    &lt;li&gt;Manzana&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Naranja&lt;/li&gt;
+&lt;/ul&gt;</div>
+
+            <div class="result">
+                <ul>
+                    <li>Manzana</li>
+                    <li>Banana</li>
+                    <li>Naranja</li>
+                </ul>
+            </div>
+
+            <h3>Lista ordenada (ol)</h3>
+            <p>Para elementos con orden secuencial:</p>
+            <div class="code-example">&lt;ol&gt;
+    &lt;li&gt;Primer paso&lt;/li&gt;
+    &lt;li&gt;Segundo paso&lt;/li&gt;
+    &lt;li&gt;Tercer paso&lt;/li&gt;
+&lt;/ol&gt;</div>
+
+            <div class="result">
+                <ol>
+                    <li>Primer paso</li>
+                    <li>Segundo paso</li>
+                    <li>Tercer paso</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ========== SECCIÓN 7: TABLAS ========== -->
+        <div class="section" id="tablas">
+            <h2>7. Tablas</h2>
+
+            <h3>Tabla básica</h3>
+            <div class="code-example">&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nombre&lt;/th&gt;
+        &lt;th&gt;Edad&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ana&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</div>
+
+            <div class="result">
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>25</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Tabla completa con thead y tbody</h3>
+            <div class="code-example">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Edad&lt;/th&gt;
+            &lt;th&gt;País&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Ana&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;México&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Luis&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;España&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</div>
+
+            <div class="result">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>País</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana</td>
+                            <td>25</td>
+                            <td>México</td>
+                        </tr>
+                        <tr>
+                            <td>Luis</td>
+                            <td>30</td>
+                            <td>España</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>Explicación:</strong> La etiqueta <code>thead</code> define la parte superior de la tabla (encabezado), donde se suelen colocar los títulos de cada columna usando <code>th</code>. El contenido principal va en <code>tbody</code>, con las celdas de datos normales escritas como <code>td</code>.</p>
+        </div>
+
+        <!-- ========== SECCIÓN 8: FORMULARIOS ========== -->
+        <div class="section" id="formularios">
+            <h2>8. Formularios (form)</h2>
+            <p>Para recolectar datos del usuario:</p>
+
+            <h3>Formulario básico</h3>
+            <div class="code-example">&lt;form&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="mensaje" name="mensaje" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</div>
+
+            <div class="result">
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+
+            <h3>Tipos de input más comunes</h3>
+            <div class="code-example">&lt;!-- Texto --&gt;
+&lt;input type="text" placeholder="Escribe tu nombre"&gt;
+
+&lt;!-- Email --&gt;
+&lt;input type="email" placeholder="correo@ejemplo.com"&gt;
+
+&lt;!-- Contraseña --&gt;
+&lt;input type="password" placeholder="Tu contraseña"&gt;
+
+&lt;!-- Número --&gt;
+&lt;input type="number" min="1" max="100"&gt;
+
+&lt;!-- Botón --&gt;
+&lt;input type="submit" value="Enviar"&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 9: MULTIMEDIA ========== -->
+        <div class="section" id="multimedia">
+            <h2>9. Elementos multimedia</h2>
+            <p>HTML5 incluye etiquetas para reproducir audio y video sin necesidad de plugins externos.</p>
+
+            <h3>Video</h3>
+            <p>Para insertar videos con controles de reproducción:</p>
+            <div class="code-example">&lt;video width="400" height="300" controls&gt;
+    &lt;source src="mi-video.mp4" type="video/mp4"&gt;
+    &lt;source src="mi-video.webm" type="video/webm"&gt;
+    Tu navegador no soporta el elemento video.
+&lt;/video&gt;</div>
+
+            <h3>Audio</h3>
+            <p>Para reproducir archivos de sonido:</p>
+            <div class="code-example">&lt;audio controls&gt;
+    &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+    &lt;source src="musica.ogg" type="audio/ogg"&gt;
+    Tu navegador no soporta el elemento audio.
+&lt;/audio&gt;</div>
+
+            <h3>Iframe</h3>
+            <p>Para insertar contenido de otras páginas web (como videos de YouTube):</p>
+            <div class="code-example">&lt;iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 10: CONTENEDORES ========== -->
+        <div class="section" id="contenedores">
+            <h2>10. Contenedores y divisiones</h2>
+            <p>Estas etiquetas te ayudan a organizar y agrupar el contenido de nuestra página.</p>
+
+            <h3>División genérica (div)</h3>
+            <p>Un contenedor genérico que se usa para agrupar elementos:</p>
+            <div class="code-example">&lt;div class="mi-seccion"&gt;
+    &lt;h2&gt;Título de la sección&lt;/h2&gt;
+    &lt;p&gt;Contenido de la sección&lt;/p&gt;
+&lt;/div&gt;</div>
+
+            <h3>Span</h3>
+            <p>Un contenedor en línea para aplicar estilos a partes específicas del texto:</p>
+            <div class="code-example">&lt;p&gt;Este texto tiene una &lt;span style="color: red;"&gt;palabra roja&lt;/span&gt; en el medio.&lt;/p&gt;</div>
+
+            <div class="result">
+                <p>Este texto tiene una <span style="color: red;">palabra roja</span> en el medio.</p>
+            </div>
+        </div>
+
+        <!-- ========== SECCIÓN 11: HTML SEMÁNTICO ========== -->
+        <div class="section" id="html-semantico">
+            <h2>11. HTML5 Semántico</h2>
+            <p>Etiquetas que mejoran la organización y accesibilidad de tu página web:</p>
+
+            <h3>Estructura semántica completa</h3>
+            <div class="code-example">&lt;header&gt;
+    &lt;h1&gt;Título principal del sitio&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#inicio"&gt;Inicio&lt;/a&gt;
+        &lt;a href="#servicios"&gt;Servicios&lt;/a&gt;
+        &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Sección principal&lt;/h2&gt;
+        &lt;article&gt;
+            &lt;h3&gt;Artículo 1l&t;/h3&gt;
+            &lt;p&gt;Contenido del artículo...&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;Contenido relacionado&lt;/h3&gt;
+        &lt;p&gt;Información adicional...&lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;© 2024 - Todos los derechos reservados&lt;/p&gt;
+&lt;/footer&gt;</div>
+
+            <h3>Explicación de cada elemento</h3>
+            <ul>
+                <li><strong>header:</strong> Encabezado de la página o sección</li>
+                <li><strong>nav:</strong> Menú de navegación</li>
+                <li><strong>main:</strong> Contenido principal de la página</li>
+                <li><strong>section:</strong> Sección temática</li>
+                <li><strong>article:</strong> Contenido independiente y reutilizable</li>
+                <li><strong>aside:</strong> Contenido secundario o complementario</li>
+                <li><strong>footer:</strong> Pie de página</li>
+            </ul>
+        </div>
+
+        <!-- ========== SECCIÓN 12: METAETIQUETAS ========== -->
+        <div class="section" id="metaetiquetas">
+            <h2>12. Metaetiquetas</h2>
+            <p>Las metaetiquetas son etiquetas HTML que proporcionan información sobre una página web al navegador y motores de búsqueda. Son datos no-visibles pero que ayudan al navegador a entender de qué trata la página y a mostrarla correctamente en los resultados de búsqueda.</p>
+
+            <p><strong>Importante:</strong> Las etiquetas <code>meta</code> siempre van dentro del elemento <code>head</code> y no serán visibles en la página, pero el navegador las analizará para entenderla mejor.</p>
+
+            <h3>Metaetiquetas esenciales</h3>
+
+            <h4>Para definir la descripción de tu página web</h4>
+            <div class="code-example">&lt;meta name="description" content="descripción de la página"&gt;</div>
+            <p><strong>Recomendación:</strong> No usar más de 150 caracteres en la descripción.</p>
+
+            <h4>Para definir palabras clave</h4>
+            <div class="code-example">&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</div>
+            <p><strong>Nota:</strong> Las palabras clave siempre se deben separar por una coma (,).</p>
+
+            <h4>Para definir al autor</h4>
+            <div class="code-example">&lt;meta name="author" content="Nombre del autor"&gt;</div>
+
+            <h4>Para definir la codificación de caracteres</h4>
+            <div class="code-example">&lt;meta charset="UTF-8"&gt;</div>
+
+            <h4>Para hacer la página responsive</h4>
+            <div class="code-example">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</div>
+        </div>
+
+        <!-- ========== SECCIÓN 13: EJEMPLO COMPLETO ========== -->
+        <div class="section" id="ejemplo-completo">
+            <h2>13. Ejemplo de página web completa</h2>
+            <p>Aquí tienes un ejemplo que integra todos los conceptos aprendidos:</p>
+
+            <div class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi primera página web&lt;/title&gt;
+    &lt;meta name="author" content="John Doe"&gt;
+    &lt;meta name="description" content="Esta es mi primera página web creada con HTML5"&gt;
+    &lt;meta name="keywords" content="html, css, web, primera página, tutorial"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenido a mi sitio web&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#inicio"&gt;Inicio&lt;/a&gt; |
+            &lt;a href="#sobre-mi"&gt;Sobre mí&lt;/a&gt; |
+            &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section id="inicio"&gt;
+            &lt;h2&gt;Página de inicio&lt;/h2&gt;
+            &lt;p&gt;¡Hola! Esta es mi primera página web.&lt;/p&gt;
+            &lt;img src="foto.jpg" alt="Mi foto personal" width="200"&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="sobre-mi"&gt;
+            &lt;h2&gt;Sobre mí&lt;/h2&gt;
+            &lt;article&gt;
+                &lt;h3&gt;Mi historia&lt;/h3&gt;
+                &lt;p&gt;Soy un desarrollador web principiante...&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+        
+        &lt;aside&gt;
+            &lt;h3&gt;Enlaces útiles&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="https://developer.mozilla.org"&gt;MDN Web Docs&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;© 2024 - Todos los derechos reservados&lt;/p&gt;
+        &lt;p&gt;Contacto: &lt;a href="mailto:correo@ejemplo.com"&gt;correo@ejemplo.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+
+        <!-- ========== CONSEJOS FINALES ========== -->
+        <div class="section">
+            <h2>💡 Consejos finales para principiantes</h2>
+            
+            <h3>Buenas prácticas</h3>
+            <ul>
+                <li><strong>Siempre cierra las etiquetas:</strong> Asegúrate de que cada etiqueta de apertura tenga su correspondiente etiqueta de cierre</li>
+                <li><strong>Usa indentación:</strong> Organiza tu código con espacios o tabs para que sea más legible</li>
+                <li><strong>Nombra tus archivos correctamente:</strong> Usa nombres descriptivos y sin espacios (ejemplo: mi-pagina.html)</li>
+                <li><strong>Valida tu HTML:</strong> Usa herramientas como el validador de W3C para verificar errores</li>
+                <li><strong>Usa atributos alt en imágenes:</strong> Importante para la accesibilidad</li>
+            </ul>
+
+            <h3>Errores comunes a evitar</h3>
+            <ul>
+                <li>Olvidar cerrar etiquetas</li>
+                <li>No usar comillas en los valores de atributos</li>
+                <li>Anidar incorrectamente las etiquetas</li>
+                <li>Usar múltiples IDs iguales en la misma página</li>
+                <li>No incluir el DOCTYPE al inicio del documento</li>
+            </ul>
+
+            <h3>Próximos pasos</h3>
+            <p>Una vez que domines HTML5, te recomendamos continuar tu aprendizaje con:</p>
+            <ul>
+                <li><strong>CSS:</strong> Para darle estilo y diseño a tus páginas</li>
+                <li><strong>JavaScript:</strong> Para agregar interactividad</li>
+                <li><strong>Frameworks:</strong> Como Bootstrap para diseño responsive</li>
+                <li><strong>Control de versiones:</strong> Git para manejar tus proyectos</li>
+            </ul>
+        </div>
+
+        <!-- ========== PIE DE PÁGINA ========== -->
+        <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 2px solid #ecf0f1;">
+            <p><strong>¡Felicidades por completar el curso básico de HTML5!</strong></p>
+            <p>!Sientete orgulloso de que no eres tan tonto como para no entender esto!</p>
+        </div>
+    </div&gt;
