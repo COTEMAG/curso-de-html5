@@ -254,6 +254,62 @@
 La etiqueta <code>&lt;thead&gt;</code> define la parte superior de la tabla (encabezado), donde se suelen colocar los títulos de cada columna usando <code>&lt;th&gt;</code>. 
 El contenido principal va en <code>&lt;tbody&gt;</code>, con las celdas de datos normales escritas como <code>&lt;td&gt;</code>.
 </p>
-    
+ 
+<!-- ========== SECCIÓN 9: ELEMENTOS MULTIMEDIA ========== -->
+<h2>9. Elementos multimedia y videos </h2>
+<p>HTML5 incluye etiquetas para reproducir audio y video sin necesidad de plugins externos o cosas asi.</p>
+
+<h3>Video</h3>
+<p>Para insertar videos con controles de reproducción:</p>
+    <code><video width="400" height="300" controls>
+    <source src="mi-video.mp4" type="video/mp4">
+    <source src="mi-video.webm" type="video/webm">
+    Tu navegador no soporta el elemento video.
+</video></code>
+
+<h3>Audio (audio)</h3>
+<p>Para reproducir archivos de sonido:</p>
+<code><audio controls>
+    <source src="musica.mp3" type="audio/mpeg">
+    <source src="musica.ogg" type="audio/ogg">
+    Tu navegador no soporta el elemento audio.
+</audio></code>
+
+<h3>Iframe</h3>
+<p>Para insertar contenido de otras páginas web (como videos de YouTube):</p>
+<code><iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        frameborder="0" allowfullscreen>
+</iframe></code>
+
+<!-- ========== SECCIÓN 10: CONTENEDORES Y DIVISIONES ========== -->
+<h2>10. Contenedores y divisiones</h2>
+<p>Estas etiquetas te ayudan a organizar y agrupar el contenido de nuestra página.</p>
+
+<h3>División genérica (div)</h3>
+<p>Un contenedor genérico que se usa para agrupar elementos:</p>
+<code><div class="mi-seccion">
+    <h2>Título de la sección</h2>
+    <p>Contenido de la sección</p>
+</div></code>
+
+<h3>Span</h3>
+<p>Un contenedor en línea para aplicar estilos a partes específicas del texto:</p>
+<pre><code><p>Este texto tiene una <span style="color: red;">palabra roja</span> en el medio.</p></code></pre>
+
+<h3>Section</h3>
+<p>Define una sección temática del documento:</p>
+<code><section>
+    <h2>Capítulo 1</h2>
+    <p>Contenido del capítulo...</p>
+</section></code>
+
+<h3>Article</h3>
+<p>Representa contenido independiente y reutilizable:</p>
+<code><article>
+    <h2>Noticia del día</h2>
+    <p>Contenido de la noticia...</p>
+    <footer>Publicado el 15 de marzo</footer>
+</article></code>
 </body>
 </html>
