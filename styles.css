@@ -1,0 +1,167 @@
+:root {
+    --background: #121212;
+    --text: #E0E0E0;
+    --blue: #3498db;
+    --background-results: #2c2c2c;
+    --background-code: #333;
+    --background-example: #1e1e1e;
+    --background-main: #33323238;
+    --shadow: #74717191
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    z-index: 1;
+    padding: 10px 0;
+    box-shadow: 0 0 40px 0 var(--shadow);
+}
+
+.title__header {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    text-align: center;
+}
+
+main {
+    top: 100px;
+    width: 800px;
+    margin: auto;
+    background-color: var(--background-main);
+    padding: 20px 40px;
+    box-shadow: 0 0 20px var(--shadow);
+    position: relative;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+}
+
+#section1, #section2, #section3, #section4, #section5, #section6, #section7, #section8, #section9, #section10, #section11, #top {
+    background-color: #44444449;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    scroll-margin-top: 80px;
+}
+
+.go_top::marker {
+    color: transparent;
+}
+
+a {
+    color: #48e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(132, 180, 252);
+}
+
+.example {
+    background: var(--background-example);
+    border-left: 4px solid var(--blue);
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.result {
+    background: var(--background-results);
+    padding: 10px;
+    border: 1px dashed var(--blue);
+    margin: 10px 0;
+}
+
+dialog {
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000004f;
+    backdrop-filter: blur(4px);
+    border: none;
+    position: fixed;
+}
+
+.dialog__info {
+    background-color: var(--background-results);
+    width: 800px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 120px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.dialog__text {
+    color: #eee;
+}
+
+.dialog__button {
+    width: 100%;
+    padding: 16px 12px;
+    font-size: 15px;
+    background-color: #1e1e1e;
+    border: none;
+    border-right: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    color: #eee;
+}
+
+@media (min-width: 800px) {
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .dialog__info {
+        width: 400px;
+        font-size: 18px
+    }
+}
+
+@media (max-width: 800px) {
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .dialog__info {
+        width: 400px;
+        font-size: 18px
+    }
+}
+
+.code-example {
+            background-color: var(--background-code);
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+}
+
+code {
+    background-color: var(--background);
+    padding: 3px;
+}
