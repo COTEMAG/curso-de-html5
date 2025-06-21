@@ -2,59 +2,64 @@
 <html>
 <head>
     <title>Curso Básico de HTML5</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        code {
-            background: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        .example {
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            padding: 10px;
-            margin: 15px 0;
-        }
-        .result {
-            background: #e8f4f8;
-            padding: 10px;
-            border: 1px dashed #3498db;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Curso Básico de HTML5</h1>
+<header class="header"> 
+<h1 class="title__header">Curso Básico de HTML5</h1>
+</header>
 
+<dialog open>
+    <div class="dialog__info"> 
+    <h2 class="dialog__title">BIENVENIDO AL CURSO DE HTML5</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML">
+    <p class="dialog__text"> Recuerda prestar mucha atencion y en caso de necesitar ayuda no tengas miedo de preguntarle a algun compañero, tambien investiga.</p>
+    <h3 class="dialot__subtitle">RECOMENDACIONES</h3>
+    <p class="dialog__text">A medida que lees el curso ves poniendolo en practica en tu editor de codigo de confianza.</p>
+    <form method="dialog">
+        <button class="dialog__button">CERRAR</button>
+    </form>
+    </div>
+</dialog>
+
+<main>
+
+<nav>
+    <h2 id="top">NAVEGACIÓN 🌍</h2>
+    <ul>
+        <li><a href="#section1">SECCIÓN 1: QUÉ ES</a></li>
+        <li><a href="#section2">SECCIÓN 2: ETIQUETAS, ATRIBUTOS, VALORES</a></li>
+        <li><a href="#section3">SECCIÓN 3: ETIQUETAS BÁSICAS</a></li>
+        <li><a href="#section4">SECCIÓN 4: ENLACES E IMAGENES</a></li>
+        <li><a href="#section5">SECCIÓN 5: ELEMENTOS MULTIMEDIA </a></li>
+        <li><a href="#section6">SECCIÓN 6: CONTENEDORES Y DIVISORES </a></li>
+        <li><a href="#section7">SECCIÓN 7: LISTAS Y TABLAS </a></li>
+        <li><a href="#section8">SECCIÓN 8: FORMULARIOS </a></li>
+        <li><a href="#section9">SECCIÓN 9: HTML SEMANTICO</a></li>
+        <li><a href="#section10">SECCIÓN 10: METAETIQUETAS </a></li>
+        <li><a href="#section11">SECCIÓN 11: EJEMPLO COMPLETO + EXTRAS </a></li>
+    </ul>
+</nav>
 <!-- ========== SECCIÓN 1: INTRODUCCIÓN ========== -->
-<h2>1. ¿Qué es HTML5?</h2>
+<h2 id="section1">1. ¿Qué es HTML5?</h2>
 <p>HTML5 es el lenguaje estándar para crear páginas web. Consiste en <strong>etiquetas (tags)</strong> que definen la estructura y contenido de una página.</p>
-
 <div class="example">
     <h3>Ejemplo básico:</h3>
-    <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Mi página&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-</div>
+    <pre class="code-example"><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Mi página&lt;/title&gt;
+                &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
+    </div>
 
 <!-- ========== SECCIÓN 2: ETIQUETAS, ATRIBUTOS Y VALORES ========== -->
-<h2>2. ¿Qué son etiquetas, atributos y valores?</h2>
+<h2 id="section2">2. ¿Qué son etiquetas, atributos y valores?</h2>
+
 
 <h3>Etiquetas (Tags)</h3>
 <p>Son palabras clave entre <code>&lt; &gt;</code> que definen elementos HTML. Pueden ser:</p>
@@ -65,17 +70,17 @@
 
 <h3>Atributos</h3>
 <p>Son modificadores que van <strong>dentro de la etiqueta de apertura</strong> y proporcionan información adicional:</p>
-<pre><code>&lt;etiqueta <strong>atributo="valor"</strong>&gt;Contenido&lt;/etiqueta&gt;</code></pre>
+<pre class="code-example"><code>&lt;etiqueta <strong>atributo="valor"</strong>&gt;Contenido&lt;/etiqueta&gt;</code></pre>
 
 <h3>Atributos globales comunes</h3>
 <p>Algunos atributos globales podrian ser <code>id</code> y tambien <code>class</code>, son de los mas utilizados ya que permiten darle una clase o un id especifico a cada elemento HTML.</p>
 <p style="font-size: 0.8em">El atributo <code>id</code> es para darle un identificador unico al elemento, mientras que el atributo <code>class</code> agrupa elementos para aplicar estilos o comportamientos a ciertos elementos</p>
 <p style="font-size: 0.8em">Ejemplo de clase</p>
-<pre>
+<pre class="code-example">
     <code>&lt;h1 class="titulo-especial"&gt; Titulo unico &lt;h1&gt;</code>
 </pre>
 <p style="font-size: 0.8em">Ejemplo de identificador (id)</p>
-<pre>
+<pre class="code-example">
     <code>&lt;p id="parrafo-importante"&gt; Este es un parrafo importante &lt;p&gt;</code>
 </pre>
 <p style="font-size: 0.8em">Se recomienda usar las clases para varios elementos, mientras que las ID solo para un unico elemento en todo el archivo HTML.</p>
@@ -83,16 +88,20 @@
     
 <h3>Valores</h3>
 <p>Es la configuración específica del atributo, siempre entre comillas:</p>
-<pre><code>&lt;img <strong>src="foto.jpg"</strong> <strong>alt="Mi imagen"</strong>&gt;</code></pre>
+<pre class="code-example"><code>&lt;img <strong>src="foto.jpg"</strong> <strong>alt="Mi imagen"</strong>&gt;</code></pre>
+
 
 <!-- ========== SECCIÓN 3: ETIQUETAS BÁSICAS ========== -->
-<h2>3. Etiquetas básicas</h2>
+<h2 id="section3">3. Etiquetas básicas</h2>
 
 <h3>Encabezados (h1 a h6)</h3>
 <div class="example">
-    <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+    <pre class="code-example"><code>&lt;h1&gt;Encabezado&lt;/h1&gt;
 &lt;h2&gt;Subtítulo&lt;/h2&gt;
-&lt;h3&gt;Sub-sección&lt;/h3&gt;</code></pre>
+&lt;h3&gt;Sub-sección&lt;/h3&gt;
+&lt;h4&gt;Subsección menor&lt;/h4&gt;
+&lt;h5&gt;Título más pequeño&lt;/h5&gt;
+&lt;h6&gt;Título más pequeño aún&lt;/h6</code></pre>
     <div class="result">
         <h1 style="font-size: 24px; margin: 5px 0;">Título principal</h1>
         <h2 style="font-size: 20px; margin: 5px 0;">Subtítulo</h2>
@@ -101,42 +110,97 @@
 </div>
 
 <h3>Párrafos (p)</h3>
-<pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;
+<pre class="code-example"><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;
 &lt;p&gt;Este es otro párrafo.&lt;/p&gt;</code></pre>
-
-<h3>Enlaces (a)</h3>
-<p>Usa el atributo <code>href</code> para especificar el destino:</p>
-<pre><code>&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
 
 <h3>Importancia (strong)</h3>
 <p>La etiqueta <code>strong</code> se utiliza para definir texto de gran importancia. El contenido que contiene se muestra en negrita:</p>
-<pre><code>&lt;strong&gt;<b>Este texto es importante</b>&lt;strong&gt;</code></pre>
+<pre class="code-example"><code>&lt;strong&gt;<b>Este texto es importante</b>&lt;strong&gt;</code></pre>
+
+<h3>Italica (emphasize)</h3>
+<p>La etiqueta <code>em</code> se utiliza para enfatizar un texto. El contenido que contiene se muestra en cursiva:</p>
+<pre class="code-example"><code>&lt;em&gt;<em>Este texto esta en cursiva</em>&lt;/em&gt;</code></pre>
 
 <h3>Negrita (b)</h3>
 <p>La etiqueta <code>b</code> especifica texto en negrita sin ninguna importancia adicional:</p>
-<pre><code>&lt;b&gt;<b>Este texto está en negrita</b>&lt;/b&gt;</code></pre>
+<pre class="code-example"><code>&lt;b&gt;<b>Este texto está en negrita</b>&lt;/b&gt;</code></pre>
+<!-- ========== SECCIÓN 4: ENLACES E IMAGENES ========== -->
+<h2 id="section4">4. ENLACES E IMAGENES </h2>
+
+<h3>Enlaces (a)</h3>
+<p>Usa el atributo <code>href</code> para especificar el destino:</p>
+<pre class="code-example"><code>&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
 
 <h3>Imágenes (img)</h3>
 <p>Etiqueta auto-cerrada con dos atributos obligatorios:</p>
-<pre><code>&lt;img src="ruta/de/imagen.jpg" alt="Texto alternativo"&gt;</code></pre>
+<pre class="code-example"><code>&lt;img src="ruta/de/imagen.jpg" alt="Texto alternativo"&gt;</code></pre>
 
-<!-- ========== SECCIÓN 4: LISTAS Y TABLAS ========== -->
-<h2>4. Listas y tablas</h2>
+<!-- ========== SECCIÓN 5: MULTIMEDIA ========== -->
+    <h2 id="section5">5. Elementos multimedia</h2>
+    <p>HTML5 incluye etiquetas para reproducir audio y video sin necesidad de plugins externos.</p>
+
+    <h3>Video</h3>
+    <p>Para insertar videos con controles de reproducción:</p>
+    <pre class="code-example"><code>&lt;video width="400" height="300" controls&gt;
+    &lt;source src="mi-video.mp4" type="video/mp4"&gt;
+    &lt;source src="mi-video.webm" type="video/webm"&gt;
+    Tu navegador no soporta el elemento video.
+&lt;/video&gt;</code></pre>
+
+    <h3>Audio</h3>
+    <p>Para reproducir archivos de sonido:</p>
+    <pre class="code-example"><code>&lt;audio controls&gt;
+    &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+    &lt;source src="musica.ogg" type="audio/ogg"&gt;
+    Tu navegador no soporta el elemento audio.
+&lt;/audio&gt;</code></pre>
+
+    <h3>Iframe</h3>
+    <p>Para insertar contenido de otras páginas web (como videos de YouTube):</p>
+    <pre class="code-example"><code>&lt;iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+
+
+<!-- ========== SECCIÓN 6: LISTAS Y TABLAS ========== -->
+
+            <h2 id="section6">Contenedores y divisiones</h2>
+            <p>Estas etiquetas te ayudan a organizar y agrupar el contenido de nuestra página.</p>
+
+            <h3>División genérica (div)</h3>
+            <p>Un contenedor genérico que se usa para agrupar elementos:</p>
+            <pre class="code-example"><code>&lt;div class="mi-seccion"&gt;
+    &lt;h2&gt;Título de la sección&lt;/h2&gt;
+    &lt;p&gt;Contenido de la sección&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+            <h3>Span</h3>
+            <p>Un contenedor en línea para aplicar estilos a partes específicas del texto:</p>
+            <pre class="code-example"><code>&lt;p&gt;Este texto tiene una &lt;span style="color: red;"&gt;palabra roja&lt;/span&gt; en el medio.&lt;/p&gt;</code></pre>
+
+            <div class="result">
+                <p>Este texto tiene una <span style="color: red;">palabra roja</span> en el medio.</p>
+            </div>
+        </div>
+
+<!-- ========== SECCIÓN 7: LISTAS Y TABLAS ========== -->
+<h2 id="section7">7. Listas y tablas</h2>
 
 <h3>Lista no ordenada (ul)</h3>
-<pre><code>&lt;ul&gt;
+<pre class="code-example"><code>&lt;ul&gt;
     &lt;li&gt;Manzana&lt;/li&gt;
     &lt;li&gt;Banana&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
 <h3>Lista ordenada (ol)</h3>
-<pre><code>&lt;ol&gt;
+<pre class="code-example"><code>&lt;ol&gt;
     &lt;li&gt;Primer paso&lt;/li&gt;
     &lt;li&gt;Segundo paso&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
 
 <h3>Tablas (table, tr, th, td)</h3>
-<pre><code>&lt;table border="1"&gt;
+<pre class="code-example"><code>&lt;table border="1"&gt;
     &lt;tr&gt;
         &lt;th&gt;Nombre&lt;/th&gt;
         &lt;th&gt;Edad&lt;/th&gt;
@@ -147,10 +211,11 @@
     &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
 
-<!-- ========== SECCIÓN 5: FORMULARIOS ========== -->
-<h2>5. Formularios (form)</h2>
+
+<!-- ========== SECCIÓN 8: FORMULARIOS ========== -->
+<h2 id="section8">8. Formularios (form)</h2>
 <p>Para recolectar datos del usuario:</p>
-<pre><code>&lt;form&gt;
+<pre class="code-example"><code>&lt;form&gt;
     &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
     &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;
 
@@ -163,10 +228,11 @@
     &lt;input type="radio" name="opcion"&gt;
 &lt;/form&gt;</code></pre>
 
-<!-- ========== SECCIÓN 6: ESTRUCTURA SEMÁNTICA ========== -->
-<h2>6. HTML5 Semántico</h2>
+
+<!-- ========== SECCIÓN 9: ESTRUCTURA SEMÁNTICA ========== -->
+<h2 id="section9">9. HTML5 Semántico</h2>
 <p>Etiquetas que mejoran la organización y accesibilidad:</p>
-<pre><code>&lt;header&gt;Encabezado&lt;/header&gt;
+<pre class="code-example"><code>&lt;header&gt;Encabezado&lt;/header&gt;
 &lt;nav&gt;Menú de navegación&lt;/nav&gt;
 &lt;main&gt;
     &lt;article&gt;Contenido principal&lt;/article&gt;
@@ -174,31 +240,32 @@
 &lt;/main&gt;
 &lt;footer&gt;Pie de página&lt;/footer&gt;</code></pre>
 
-<!-- ========== SECCIÓN 7: METAETIQUETAS ========== -->
-<h2>7. Metaetiquetas </h2>
+
+<!-- ========== SECCIÓN 10: METAETIQUETAS ========== -->
+<h2 id="section10">10. Metaetiquetas </h2>
 <p>Las metaetiquetas son etiquetas HTML que proporcionan información sobre una pagina web al cliente (motores de búsqueda/navegador), son datos no-visibles pero que ayudan al cliente (navegador) a entender de que trata la pagina y a mostrarla correctamente en los resultados de búsqueda. </p>
 <p>Las etiquetas <code>&lt;meta&gt;</code> siempre van dentro del elemento <code>&lt;head&gt;</code> y se utiliza normalmente para especificar la descripción de la página, las palabras clave, el autor del documento, entre otros. </p>
 <p>Las etiquetas <code>&lt;meta&gt;</code> no serán visibles en la página, pero el cliente (navegador) lo analizará para entenderla mejor. Estas etiquetas se usan semánticamente para lograr una mejor posición de tu página web. </p>
 
 <h3>Para definir palabras clave</h3>
 <p style="font-size: 0.8em">Se utiliza el <strong>name</strong> para especificar el nombre del metadato y luego se usa <strong>content</strong> para especificar el valor asociado con el nombre del atributo, ejemplo </p>
-<pre>
+<pre class="code-example">
   <code>&lt;meta name="keywords" content="HTML, css, javascript"&gt;</code>
 </pre>
 <p style="font-size: 0.8em">Siempre se deben separar por una coma (,) las palabras clave.</p>
 <h3>Para definir al autor</h3>
-<pre>
+<pre class="code-example">
   <code>&lt;meta name="author" content="Nombre"&gt;</code>
 </pre>
 <h3>Para ponerle descripcion a tu página web</h3>
-<pre>
+<pre class="code-example">
   <code>&lt;meta name="description" content="descripcion de la página"&gt;</code>
 </pre>
 <p style="font-size: 0.8em">En la descripción de la página se recomienda no usar más de 150 carácteres</p>
 
-<!-- ========== SECCIÓN 8: EJEMPLO COMPLETO ========== -->
-<h2>8. Página web completa</h2>
-<pre><code>&lt;!DOCTYPE html&gt;
+<!-- ========== SECCIÓN 11: EJEMPLO COMPLETO ========== -->
+<h2 id="section11">11. Página web completa</h2>
+<pre class="code-example"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Mi primera página&lt;/title&gt;
@@ -231,6 +298,31 @@
 
 <h3>Tabla con &lt;thead&gt;, &lt;tbody&gt;, &lt;th&gt; y &lt;td&gt;</h3>
 
+<pre class="code-example">
+<code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Edad&lt;/th&gt;
+            &lt;th&gt;País&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Ana&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;México&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Luis&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;España&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
 <table border="1">
     <thead>
         <tr>
@@ -261,7 +353,7 @@ El contenido principal va en <code>&lt;tbody&gt;</code>, con las celdas de datos
 <p> etiqueta de comentario <code>&lt;!-- comentario --&gt</code> nos sirve para agregar comentarios en el código HTML para describir partes del contenido sin que se muestren en el navegador.</p>
 <h2>Etiquetas de texto adicionales</h2>
 <p>Incluye etiquetas utiles para darle formato al texto:</p>
-<pre>
+<pre class="code-example">
     <code>&lt;em&gt; </code> texto en cursiva con énfasis semántico.
     <code>&lt;i&gt; </code> texto en cursiva sin énfasis.
     <code>&lt;mark&gt; </code> resalta texto.
@@ -269,6 +361,6 @@ El contenido principal va en <code>&lt;tbody&gt;</code>, con las celdas de datos
     <code>&lt;small&gt; </code> texto pequeño.
     <code>&lt;del&gt; y &lt;ins&gt;</code> texto tachado y texto insertado.
 </pre>
-    
+</main>
 </body>
 </html>

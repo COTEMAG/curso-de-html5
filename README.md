@@ -22,8 +22,12 @@ Curso completo de **HTML5** diseñado para **principiantes absolutos** que quier
 ```plaintext
 1. Introducción a HTML5
 2. Etiquetas, atributos y valores
-3. Etiquetas básicas (texto, enlaces, imágenes)
-4. Listas y tablas
-5. Formularios interactivos
-6. HTML semántico
-7. Proyecto final completo
+3. Etiquetas básicas
+4. Enlaces e imágenes
+5. Elementos multimedia
+6. Contenedores y Divisores
+7. Listas y Tablas
+8. Formularios
+9. HTML Semántico
+10. Metaetiquetas
+11. Ejemplo + Extras
